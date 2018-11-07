@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="mediumOauth.css">
+    <script src="mediumOauth.js"></script>
+</head>
+<body>
+    <div id="close">
+        <button onclick="closeWindow()">X</button>
+    </div>
+    <div id="content">
+        <img id="icon" src="../../img/medium.png">
+        <div>
+            <span>token</span>
+            <input id="token" type="text" placeholder="Enter your Medium's integration token here" size="50" oninput="activateAddBtn(this.value)">
+        </div>
+        <p>Markdown needs an integration token to publish to your Medium account. Go to Medium settings page and generate a token in "Integration Token" section.</p>
+        <button id="addBtn" disabled onclick="addServer()">Add service</button>
+    </div>
+</body>
+</html>

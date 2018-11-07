@@ -1,0 +1,287 @@
+:root {
+    --button-height: 58px;
+    --state-size: 20px;
+    --editor-padding-size: 30px;
+    --editor-padding-left-right-size: 20px;
+}
+
+.button-panel {
+    height: var(--button-height);
+    border-top: 1px solid rgb(68, 66, 74);
+    position: relative;
+}
+
+.panel-button {
+    height: var(--state-size);
+    width: var(--state-size);
+    position: absolute;
+    background-color: aliceblue;
+    top: 2px;
+}
+
+#add-file-button {
+    left: 5px;
+}
+
+#setting-button {
+    right: 5px;
+}
+
+#display-nev-button {
+    left: 3px;
+}
+
+#upload-button {
+    left: calc(5px * 2 + var(--state-size));
+}
+
+#insert-img-button {
+    left: calc(5px * 3 + 2 * var(--state-size));
+}
+
+#show-outline-button {
+    left: calc(5px * 4 + 3 * var(--state-size));
+}
+
+#word-count {
+    right: calc(5px * 2 + var(--state-size));
+}
+
+#display-preview-button {
+    right: 5px;
+}
+
+#export-button {
+    right: 5px;
+}
+
+.inner-list-element {
+    padding: 3px 8px 7px 0px;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 600;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    display: block;
+    transition: 0.3s;
+    white-space: nowrap;
+    position: relative;
+    margin-top: calc(-1 * var(--state-size));
+    margin-left: var(--state-size);
+}
+
+.main-tab {
+    padding: 8px 8px 8px 10px;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 600;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+    overflow: hidden;
+}
+
+.sub-tab {
+    padding: 8px 8px 8px 0px;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 500;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+    overflow: auto;
+}
+
+.file-outter-container:hover #close {
+    opacity: 1;
+}
+
+.folder-inner-list-element {
+    padding-top: 2px;
+}
+
+.folder-inner-list-element:hover {
+    color: #f1f1f1;
+    transition: 0.3s;
+}
+
+#close {
+    opacity: 0;
+}
+
+#circle {
+    display: none;
+}
+
+.file-icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 17px;
+    height: 20px;
+    background-color: aliceblue;
+}
+.file-name {
+    margin-left: 17px;
+}
+
+.file-state-container {
+    position: relative;
+    width: var(--state-size);
+    height: var(--state-size);
+}
+
+.file-state {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: var(--state-size);
+    height: var(--state-size);
+    background-color: aliceblue;
+}
+
+#nav-panel {
+    height: calc(100% - var(--button-height));
+    width: 100%;
+    overflow: auto;
+}
+
+#nav {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: rgb(39, 36, 44);
+}
+
+#nav-helper {
+    -webkit-app-region: drag;
+    background-color: rgb(39, 36, 44);
+    height: 28px;
+    margin-top: -28px;
+    resize: horizontal;
+}
+
+#editor-panel {
+    height: calc(100% - var(--button-height));
+    padding-left: var(--editor-padding-left-right-size);
+    padding-right: var(--editor-padding-left-right-size);
+}
+
+#editor {
+    background-color: rgb(52, 48, 58);
+    position: relative;
+}
+
+#preview-button-panel {
+    /* background-color: rgb(14, 14, 14); */
+    border-color: rgb(234, 234, 234);
+    background-color: white;
+}
+
+#preview-panel {
+    /* color: rgb(135, 135, 135); */
+    /* background-color: rgb(14, 14, 14); */
+    /* font-family: 'Open Sans'; */
+    background-color: white;
+    height: calc(100% - var(--button-height));
+    width: 100%;
+    /* overflow-x: hidden; */
+    /* overflow-y: auto; */
+    overflow: scroll;
+}
+
+#preview-panel-content {
+    background-color: white;
+    padding-left: var(--editor-padding-left-right-size);
+    padding-right: var(--editor-padding-left-right-size);
+    height: auto;
+    width: auto;
+}
+
+/* pre { */
+    /* padding: 9.5px;
+    border: 1px solid rgb(135, 135, 135);
+    border-radius: 4px;
+    background-color: rgb(26, 26, 26);
+    word-wrap: break-word;
+    word-break: break-all; */
+    /* overflow: auto; */
+    /* overflow-y: auto; */
+/* } */
+
+/* blockquote {
+    padding: 5px 20px 5px 20px;
+    background-color: rgb(26, 26, 26);
+    border-left: 2px solid rgb(67, 67, 67);
+} */
+
+/* code {
+    background-color: rgb(26, 26, 26);
+    border-radius: 3px;
+    word-break: break-all;
+    word-wrap: break-word;
+    overflow: auto;
+} */
+
+/* code::before ::after {
+    letter-spacing: -0.2em;
+    content: '\00a0';
+} */
+
+#preview {
+    position: relative;
+}
+
+#pre-helper {
+    /* background-color: rgb(14, 14, 14); */
+    background-color: white;
+    -webkit-app-region: drag;
+    height: 28px;
+    margin-top: -28px;
+    resize: horizontal;
+    position: absolute;
+    right: -1px;
+}
+
+#window {
+    height: 100%;
+    width: 100%;
+    -webkit-app-region: no-drag;
+    /* overflow: auto; */
+}
+
+.window {
+    height: 100%;
+}
+
+.gutter.gutter-horizontal {
+    height: 100%;
+    float: left;
+}
+
+body {
+    -webkit-app-region: drag;
+    background-color: rgb(52, 48, 58);
+    height: 100%;
+    margin-top: 28px;
+    margin-left: 0%;
+    margin-right: 0%;
+    margin-bottom: 0%;
+    overflow: hidden;
+}
+
+html {
+    height: 100%;
+    -webkit-app-region: drag;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    src: local('OpenSans-Reg'), url('OpenSans-Regular.ttf');
+}

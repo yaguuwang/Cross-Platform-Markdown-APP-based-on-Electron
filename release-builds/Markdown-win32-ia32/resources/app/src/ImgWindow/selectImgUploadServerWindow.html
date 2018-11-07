@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="selectImgUploadServerWindow.css">
+    <script src="selectImgUploadServerWindow.js"></script>
+</head>
+<body>
+    <div id="title">Select an image server to upload</div>
+    <div id="image-services"></div>
+    <div id="buttons">
+        <button id='cancel' onclick="closeWindow()">Cancel</button>
+        <button id='add' onclick="addServer()">Add service</button>
+        <button id='upload' onclick="upload()">Upload</button>
+    </div>
+    <div id="progress-cover">
+        <!-- 旋转indicator -->
+        <div id="loader"></div>
+        <p id="return-msg"></p>
+    </div>
+</body>
+</html>

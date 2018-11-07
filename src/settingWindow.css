@@ -1,0 +1,149 @@
+:root {
+    --active-color: rgb(255, 255, 255);
+    --inactive-color: rgb(240, 240, 240);
+    --lower-height: 24px;
+}
+
+html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    height: calc(100% - 16px);
+    width: calc(100% - 16px);
+    overflow: hidden;
+    background-color: var(--inactive-color);
+    margin: 8px;
+}
+
+.upper {
+    height: calc(100% - var(--lower-height));
+    width: 100%;
+    overflow: hidden;
+}
+
+.lower {
+    height: var(--lower-height);
+    width: 100%;
+    position: relative;
+}
+
+/* Style the tab */
+.tab {
+    overflow: hidden;
+    /* border: 1px solid #ccc; */
+    background-color: var(--inactive-color);
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+    background-color: var(--active-color);
+}
+
+/* Style the tab content */
+.tabContent {
+    height: calc(100% - 48px);
+    /* width: 100%; */
+    display: none;
+    /* padding: 6px 12px; */
+    /* border: 1px solid #ccc; */
+    /* border-top: none; */
+    background-color: var(--active-color);
+}
+
+#general {
+    display: block;
+}
+
+#deleteBtn {
+    position: absolute;
+    top: 5px;
+    left: 0;
+    display: none;
+}
+
+#closeBtn {
+    position: absolute;
+    top: 5px;
+    right: 0;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.leftCol {
+    float: left;
+    width: 40%;
+    height: 100%;
+    /* padding: 10px; */
+    border-right: 1px solid var(--inactive-color);
+    overflow: auto;
+}
+
+.rightCol {
+    float: left;
+    width: calc(60% - 1px);
+    height: 100%;
+    /* padding: 10px; */
+}
+
+.service-tab {
+    height: 64px;
+    border-bottom: 1px solid var(--inactive-color);
+    overflow: hidden;
+}
+
+.service-tab:hover {
+    background-color: var(--inactive-color);
+}
+
+.service-img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    /* width: 200px; */
+    height: 44px;
+}
+
+.outter_container {
+    position: relative;
+    height: 50px;
+}
+
+.added_service_img {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    width: 36px;
+    height: 36px;
+}
+
+.added_service_name {
+    margin-left: 44px;
+    padding-top: 16px;
+}

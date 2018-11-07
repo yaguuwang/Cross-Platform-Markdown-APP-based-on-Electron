@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="settingWindow.css">
+    <script src="settingWindow.js"></script>
+    <script src="googleOauth.js"></script>
+    <script src="imgur/imgurOauth.js"></script>
+    <script src="github/githubOauth.js"></script>
+    <script src="wordpress/wordpressOauth.js"></script>
+</head>
+
+<body>
+    <div class="upper">
+        <div class="tab">
+            <button class="tabLink active" onclick="openTab(event, 'general')">General</button>
+            <button class="tabLink" onclick="openTab(event, 'publishing')">Publishing</button>
+            <button class="tabLink" onclick="openTab(event, 'image')">Image</button>
+            <button class="tabLink" onclick="openTab(event, 'apperance')">Apperance</button>
+            <button class="tabLink" onclick="openTab(event, 'about')">About</button>
+        </div>
+        <div id="general" , class="tabContent">general</div>
+        <div id="publishing" , class="tabContent row"></div>
+        <div id="image" , class="tabContent row"></div>
+        <div id="apperance" , class="tabContent">apperance</div>
+        <div id="about" , class="tabContent">about</div>
+    </div>
+    <div class="lower">
+        <button id="deleteBtn" onclick="deleteService()">Delete</button>
+        <button id="closeBtn" onclick="closeWindow()">Close</button>
+    </div>
+</body>
+
+</html>

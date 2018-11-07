@@ -1,0 +1,36 @@
+:root {
+    --bc-white: rgb(255,255,255);
+}
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background-color: var(--bc-white);
+    margin: 0;
+}
+
+#close {
+    height: 28px;
+}
+
+#content {
+    margin: 20px 60px;
+}
+
+#icon {
+    display: block;
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#addBtn {
+    display: block;
+    width: 100px;
+    margin: auto;
+}
